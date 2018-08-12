@@ -1,0 +1,13 @@
+{
+  "scripts": {
+		"install-server": "npm --prefix ./server install",
+    "install-client": "npm --prefix ./dashboard install",
+		"build-client": "npm --prefix ./dashboard run build",
+		"heroku-prebuild": "npm run install-server && npm run install-client && npm run build-client",
+		"start": "pm2 start server/src/server.js --watch --interpreter babel-node && pm2 logs"
+  },
+	"engines": {
+		"node": "8.11.3",
+		"npm": "5.6.0"
+	}
+}

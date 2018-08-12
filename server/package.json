@@ -1,0 +1,28 @@
+{
+  "name": "bratan-server",
+  "version": "0.0.0",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "dev": "pm2 start src/server.js --watch --interpreter babel-node && pm2 logs",
+    "test": "jest"
+  },
+  "author": "Dima",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "pm2": "^3.0.0",
+    "puppeteer": "^1.6.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
+  }
+}
