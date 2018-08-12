@@ -3,7 +3,7 @@
 		"install-server": "npm --prefix ./server install",
     "install-client": "npm --prefix ./dashboard install",
 		"build-client": "npm --prefix ./dashboard run build",
-		"heroku-prebuild": "npm run install-server && npm run install-client && npm run build-client",
+		"heroku-prebuild": "cd server && npm install && cd ../dashboard && npm run build && cd ..",
 		"start": "pm2 start server/src/server.js --watch --interpreter babel-node && pm2 logs"
   },
 	"engines": {
